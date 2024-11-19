@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Editor</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <!-- <p>Hello, World!</p> -->
+        <div id="editor-bottom-menu">
+            <label id="cursor-pos">Ln 0, Col 0</label>
+        </div>
+        <div id="editor-menu">
+            <button id="new">New</button>
+            <button id="open">Open</button>
+            <button id="save">Save</button>
+            <button id="clear">Clear</button>
+        </div>
+        <textarea id="editor" cols="1000" rows="1000" onkeyup="getLineNumber(this, document.getElementById('cursor-pos'))"></textarea>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+html {
+    scrollbar-width: thin;
+}
+
+body {
+    background-color: #2f2f2f;
+    justify-content: center;
+    margin: 0px;
+}
+
+p {
+    color: #f6f6f6;
+}
+
+label {
+    color: white;
+}
+
+div {
+    background-color: #2f2f2f;
+}
+
+#editor-menu {
+    width: 100%;
+    position: fixed;
+    /* top: -2%; */
+}
+
+#editor {
+    background-color: #252525;
+    color: white;
+    resize: none;
+    width: 99%;
+    height: 100%;
+    /* top: 100px; */
+    display: block;
+}
+
+#save {
+    background-color: greenyellow;
+}
+
+#clear {
+    background-color: red;
+}
+
+#editor-bottom-menu {
+    background-color: #2f2f2f;
+    display: flexbox;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
