@@ -7,28 +7,28 @@ function getLineNumber(textarea, indicator) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    invoke("set_window_title", {title: "Unamed.txt"});
+    invoke("set_window_title", { title: "Unamed.txt" });
 
     document.querySelector("#save").addEventListener("click", () => {
-        const content = document.querySelector("#editor").value;
-        invoke("save_file", {content});
+        const content = document.querySelector("#textarea").value;
+        invoke("save_file", { content });
     });
 
     document.querySelector("#clear").addEventListener("click", () => {
-        document.querySelector("#editor").value = "";    
+        document.querySelector("#textarea").value = "";
     });
 
 
     document.querySelector("#open").addEventListener("click", () => {
         console.log("open");
         invoke("open_file").then((content) => {
-            document.querySelector("#editor").value = content;
+            document.querySelector("#textarea").value = content;
         });
     });
 
     document.querySelector("#new").addEventListener("click", () => {
         document.querySelector("#editor").value = "";
-        invoke("set_window_title", {title: "Unamed.txt"});
+        invoke("set_window_title", { title: "Unamed.txt" });
     });
 
     let prevTime = performance.now();
