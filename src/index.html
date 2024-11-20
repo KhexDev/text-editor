@@ -11,7 +11,8 @@
     <body>
         <!-- <p>Hello, World!</p> -->
         <div id="editor-bottom-menu">
-            <label id="cursor-pos">Ln 0, Col 0</label>
+            <label id="cursor-pos" class="editor-bottom-item">Ln 0, Col 0</label>
+            <label id="fps-counter" class="editor-bottom-item">FPS 0</label>
         </div>
         <div id="editor-menu">
             <button id="new">New</button>
@@ -19,6 +20,9 @@
             <button id="save">Save</button>
             <button id="clear">Clear</button>
         </div>
-        <textarea id="editor" cols="1000" rows="1000" onkeyup="getLineNumber(this, document.getElementById('cursor-pos'))"></textarea>
+        <div id="editor-container" class="container">
+            <div id="line-numbers" class="container__lines"></div>
+            <textarea id="textarea" class="container__textarea" cols="1000" rows="1000" onkeyup="getLineNumber(this, document.getElementById('cursor-pos'))"></textarea>
+        </div>
     </body>
 </html>

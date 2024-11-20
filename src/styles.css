@@ -23,17 +23,18 @@ div {
 #editor-menu {
     width: 100%;
     position: fixed;
+    z-index: 1  ;
     /* top: -2%; */
 }
 
-#editor {
+#textarea {
     background-color: #252525;
     color: white;
     resize: none;
     width: 99%;
-    height: 100%;
-    /* top: 100px; */
-    display: block;
+    height: 99%;
+    top: 300px;
+    /* display: block; */
 }
 
 #save {
@@ -44,10 +45,46 @@ div {
     background-color: red;
 }
 
+#cursor-pos {
+    display: flex;
+}
+
+#fps-counter {
+    display: flex;
+}
+
 #editor-bottom-menu {
     background-color: #2f2f2f;
-    display: flexbox;
+    display: flex;
     position: fixed;
+    z-index: 1;
     bottom: 0px;
     width: 100%;
+    /* flex-direction: row-reverse; */
+    justify-content: space-between;
+}
+
+
+.editor-bottom-item {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    /* border: 1px solid rgb(203 213 225); */
+    position: absolute;
+    top: 25px;
+}
+.container__textarea {
+    border: none;
+}
+.container__lines {
+    /* border-right: 1px solid rgb(203 213 225); */
+    overflow: hidden;
+}
+
+#line-numbers {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
 }

@@ -1,6 +1,6 @@
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 
-use tauri::WindowEvent;
+use notify_rust::{Notification, Timeout};
 
 #[tauri::command]
 fn set_window_title(window: tauri::Window, title: &str) {
@@ -15,6 +15,7 @@ fn save_file(window: tauri::Window, content: &str) {
 
     let res = rfd::FileDialog::new()
         .add_filter("text", &["txt"])
+        .add_filter("all", &["*"])
         .save_file();
 
     if let Some(path) = res {
@@ -31,6 +32,7 @@ fn save_file(window: tauri::Window, content: &str) {
 fn open_file(window: tauri::Window) -> Result<String, String> {
     let res = rfd::FileDialog::new()
         .add_filter("text", &["txt"])
+        .add_filter("all", &["*"])
         .pick_file();
 
     if let Some(path) = res {
